@@ -1,0 +1,65 @@
+/* Chat CSS */
+#chat{
+  max-width: 50vw;
+  height: 400px;
+  overflow: auto;
+  border: 1px black solid;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 10px;
+}
+
+.message{
+  display: flex;
+  flex-direction: column;
+  max-width: max-content;
+}
+
+.message .content{
+  padding: 2px 10px;
+  border-radius: 0;
+}
+
+.message .sender{
+  font-size: 0.7rem;
+  text-align: center;
+  font-style: italic;
+  --distance: 5px;
+}
+
+.message.owner{
+  align-self: flex-end;
+}
+
+.message.other {
+  align-items: flex-start;
+}
+
+.message.other .content {
+  background-color: rgba(255,0,0,0.07);
+  border-radius: 10px 10px 10px 0px;
+}
+
+.message.owner .content{
+  background-color: rgba(0,0,255,0.15);
+  border-radius: 10px 10px 0 10px;
+}
+
+.message.owner .sender{
+  align-self: flex-end;
+  padding-right: var(--distance);
+}
+
+.message.other .sender{
+  align-self: flex-start;
+  padding-left: var(--distance);
+}
+
+.send-container{
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  max-width: 50vw;
+}
