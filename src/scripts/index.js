@@ -56,11 +56,15 @@ function validateChat(chat) {
 }
 
 function insertMessageInChat({ chat, message, isOwner = false }) {
-  validateMessage(message);
-  validateChat(chat);
-  const messageDiv = parseMessageToHTML({ message });
-  messageDiv.classList.add(isOwner ? 'owner' : 'other');
-  chat.appendChild(messageDiv);
+  try {
+    validateMessage(message);
+    validateChat(chat);
+    const messageDiv = parseMessageToHTML({ message });
+    messageDiv.classList.add(isOwner ? 'owner' : 'other');
+    chat.appendChild(messageDiv);
+  } catch (err) {
+    alert(err.message);
+  }
 }
 
 const myChat = getChatById('chat');
