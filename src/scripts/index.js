@@ -35,7 +35,29 @@ function parseMessageToHTML({ message }) {
   return messageDiv;
 }
 
+function validateMessage(message) {
+  if (!message) {
+    throw new Error('Deve mandar uma mensagem!');
+  }
+
+  if (!message.author || !message.content) {
+    throw new Error('Faltando author ou content na mensagem!');
+  }
+}
+
+function validateChat(chat) {
+  if (typeof chat !== 'object') {
+    throw new Error('Chat inválido!');
+  }
+
+  if (!chat.appendChild) {
+    throw new Error('Chat inválido!');
+  }
+}
+
 function insertMessageInChat({ chat, message, isOwner = false }) {
+  validateMessage(message);
+  validateChat(chat);
   const messageDiv = parseMessageToHTML({ message });
   messageDiv.classList.add(isOwner ? 'owner' : 'other');
   chat.appendChild(messageDiv);
