@@ -1,8 +1,7 @@
 {
     "env": {
         "browser": true,
-        "commonjs": true,
-        "es2021": true
+        "commonjs": true
     },
     "plugins": [
         "prettier"
@@ -15,6 +14,7 @@
         "ecmaVersion": 12
     },
     "rules": {
-        "prettier/prettier": "error"
+        "prettier/prettier": "error",
+        "no-undef": "off"
     }
 }

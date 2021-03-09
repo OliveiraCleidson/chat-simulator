@@ -5,12 +5,12 @@
   "repository": "git@github.com:OliveiraCleidson/chat-simulator.git",
   "author": "Cleidson Oliveira <gk.cleidson@yahoo.com.br>",
   "license": "MIT",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^7.21.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.1.0",
+    "eslint-plugin-es5": "^1.5.0",
     "eslint-plugin-import": "^2.22.1",
     "eslint-plugin-prettier": "^3.3.1",
     "prettier": "^2.2.1"

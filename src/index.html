@@ -7,28 +7,14 @@
   <title>Chat Simulator</title>
   <link rel="stylesheet" href="./styles/global.css" />
   <link rel="stylesheet" href="./styles/index.css" />
-
+  <script src="lib/chat.js"></script>
+  <script src="lib/repository.js"></script>
 </head>
 <body>
-  <div class="container">
-    <div id="chat">
-      <div class="message owner">
-        <div class="sender">Oliver</div>
-        <div class="content">Olá mundo!</div>
-      </div>
-
-      <div class="message other">        
-        <div class="sender">Iago</div>
-        <div class="content">Olá planeta!</div>
-
-      </div>
-    </div>
-    <div class="send-container">
-      <input id='messageToSend' type="text" placeholder="Digite sua mensagem!">
-      <input type="button" value="Enviar" />
-    </div>
+  <div id="root">
+    <div id="chatContainer" class="chatContainer"></div>
 
   </div>
-  <script src="scripts/index.js"></script>
+<script src="./scripts/index.js"></script>
 </body>
 </html>
